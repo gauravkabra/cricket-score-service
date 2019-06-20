@@ -1,8 +1,5 @@
 package com.cricket.score.cricketscoreservice.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;
@@ -14,8 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.cricket.score.cricketscoreservice.bean.CricketLiveScore;
-import com.cricket.score.cricketscoreservice.bean.CricketScore;
 import com.cricket.score.cricketscoreservice.constant.Constants;
 
 @Controller
