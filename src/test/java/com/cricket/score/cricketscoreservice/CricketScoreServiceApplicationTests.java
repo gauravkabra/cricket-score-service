@@ -3,12 +3,12 @@ package com.cricket.score.cricketscoreservice;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -33,7 +33,7 @@ public class CricketScoreServiceApplicationTests {
 //	    Assert.assertEquals(200, result.getStatusCodeValue());
 //	    Assert.assertEquals(true, result.getBody().contains("employeeList"));
 	    
-	    Assert.hasText("score", result.toString());
+	   // Assert.hasText("score", result.toString());
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ public class CricketScoreServiceApplicationTests {
 //	    Assert.assertEquals(200, result.getStatusCodeValue());
 //	    Assert.assertEquals(true, result.getBody().contains("employeeList"));
 	    
-	    Assert.hasText("abc", result.toString());
+	   // Assert.hasText("abc", result.toString());
 	}
 	
 	@Test
@@ -62,10 +62,10 @@ public class CricketScoreServiceApplicationTests {
 	    ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
 	     
 //	    //Verify request succeed
-//	    Assert.assertEquals(200, result.getStatusCodeValue());
-//	    Assert.assertEquals(true, result.getBody().contains("employeeList"));
+	    Assert.assertEquals(200, result.getStatusCodeValue());
+	    Assert.assertEquals(true, result.toString().length()>2);
 	    
-	    Assert.hasText("score", result.toString());
+	    //Assert.hasText("score", result.toString());
 	}
 
 }
